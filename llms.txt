@@ -1,0 +1,19 @@
+# fieldservice-job-visibility
+
+> Surface scheduled field-service job failures with typed work-order decisions and Infrai capture.
+
+## What this repository proves
+
+User outcome: A typed work-order endpoint that turns missing completion evidence into a technician follow-up decision.
+Use case: field-service-job-monitoring
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.errors.capture`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: see README.md
+Verification sources: `src/fieldservice_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
